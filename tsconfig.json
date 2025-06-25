@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "es2020",
+    "module": "commonjs",          // back to CJS
+    "moduleResolution": "node",
+    "downlevelIteration": true,
+    "esModuleInterop": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "lib": ["es2020", "dom"],
+    "resolveJsonModule": true
+  },
+  "include": ["src", "bin", "tests"]
+}

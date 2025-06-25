@@ -23,3 +23,12 @@ export async function saveEntry(row: Record<string, any>) {
     .select('id')
     .single();
 }
+
+export async function fetchProfile() {
+  return supa.from('profile').select('*').single();
+}
+
+export async function updateProfile(patch: Record<string, any>) {
+  patch.updated_at = new Date().toISOString();
+  return supa.from('profile').update(patch).neq('id', '');  // only row
+}
